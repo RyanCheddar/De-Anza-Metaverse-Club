@@ -1,0 +1,69 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.3/dist/mindar-image-aframe.prod.js"></script>
+  </head>
+  <script>
+     window.addEventListener('targetFound', function () {
+    // Get video element by id
+    var videoElement = document.getElementById("poster");
+    
+    // Play the video
+    videoElement.play();
+  });
+
+  const showAvatar = (onDone) => {
+        const avatar = document.querySelector("#capybara");
+        let z = -0.3;
+        const id = setInterval(() => {
+          z += 0.008;
+          if (z >= 0.3) {
+            clearInterval(id);
+            onDone();
+          }
+          avatar.setAttribute("position", "0 -0.25 " + z);
+        }, 10);
+      }
+
+  AFRAME.registerComponent('mytarget', {
+        init: function () {
+          this.el.addEventListener('targetFound', event => {
+            console.log("target found");
+            showAvatar(() => {
+              setTimeout(() => {
+                showPortfolio(() => {
+                  setTimeout(() => {
+                    showInfo();
+                  }, 300);
+                });
+              }, 300);
+            });
+          });
+          this.el.addEventListener('targetLost', event => {
+            console.log("target found");
+          });
+          //this.el.emit('targetFound');
+        }
+      });
+
+  </script>
+  <body>
+    <a-scene mindar-image="imageTargetSrc: ./targets.mind;" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" mindar-image="filterMinCF:0.0001; filterBeta: 0.001; missTolerance: 10">
+      <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+      <a-entity id="mytarget" mytarget mindar-image-target="targetIndex: 0">
+        <a-plane src="#poster" position="0 0 0" height="1.2916" width="1" rotation="0 0 0"></a-plane>
+        <a-gltf-model visible=false rotation="0 0 0 " position="0.4 0 0.5" scale="0.02 0.02 0.02" src="#avatarModel" animation=""></a-gltf-model>
+        <a-gltf-model visible=true rotation="0 0 0 " position="0 -0.25 0.5" scale="0.3 0.3 0.3" src="#capybara" animation=""></a-gltf-model>
+        
+      </a-entity>
+      
+
+      <a-assets>
+        <video muted autoplay loop playsinline crossorigin="anonymous" id="poster" src="./poster.mp4"></a-video>
+        <a-asset-item id="avatarModel" src="./Epic Hango.glb"></a-asset-item>
+        <a-asset-item id="capybara" src="./capybara.glb"></a-asset-item>
+      </a-assets>
+    </a-scene>
+  </body>
+</html>
