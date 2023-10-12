@@ -13,32 +13,20 @@
     videoElement.play();
   });
 
-  const showAvatar = (onDone) => {
-        const avatar = document.querySelector("#capybara");
-        let z = -0.3;
-        const id = setInterval(() => {
-          z += 0.008;
-          if (z >= 0.3) {
-            clearInterval(id);
-            onDone();
-          }
-          avatar.setAttribute("position", "0 -0.25 " + z);
-        }, 10);
-      }
 
   AFRAME.registerComponent('mytarget', {
         init: function () {
           this.el.addEventListener('targetFound', event => {
             console.log("target found");
-            showAvatar(() => {
               setTimeout(() => {
-                showPortfolio(() => {
-                  setTimeout(() => {
-                    showInfo();
-                  }, 300);
-                });
-              }, 300);
-            });
+                const portfolio = document.querySelector("#portfolio");
+
+                portfolio.setAttribute("visible", true);
+
+                portfolio.addEventListener('click', function (evt) {
+                  window.location.replace("https://discord.gg/cVwpHH4v");
+              });
+              }, 8000);
           });
           this.el.addEventListener('targetLost', event => {
             console.log("target found");
@@ -53,8 +41,8 @@
       <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
       <a-entity id="mytarget" mytarget mindar-image-target="targetIndex: 0">
         <a-plane src="#poster" position="0 0 0" height="1.2916" width="1" rotation="0 0 0"></a-plane>
-        <a-gltf-model visible=false rotation="0 0 0 " position="0.4 0 0.5" scale="0.02 0.02 0.02" src="#avatarModel" animation=""></a-gltf-model>
-        <a-gltf-model visible=true rotation="0 0 0 " position="0 -0.25 0.5" scale="0.3 0.3 0.3" src="#capybara" animation=""></a-gltf-model>
+        <a-gltf-model visible=false id="portfolio" class="clickable" rotation="0 0 0 " position="0.4 0 0.5" scale="0.02 0.02 0.02" src="#avatarModel" animation=""></a-gltf-model>
+        <a-gltf-model visible=true rotation="0 0 0 " position="0 -0.25 0.5" scale="0.3 0.3 0.3" src="#capybara" animation="property: rotation; to: 0 360 0; dur: 2000; loop: true"></a-gltf-model>
         
       </a-entity>
       
