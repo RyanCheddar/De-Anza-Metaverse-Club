@@ -8,9 +8,11 @@ The experience utilizes [MindAR](https://hiukim.github.io/mind-ar-js-doc/), an a
 
 *targets.mind* is a compiled file containing tracking information about the original poster, which enables the code to track the poster. it was created using [this tool](https://hiukim.github.io/mind-ar-js-doc/tools/compile)
 
-*Epic Hango.hlb* is a 3D model for the pseudo Windows 95 pop up that appears 8 seconds after the poster is detected for the first time.
+*Epic Hango.hlb* is a 3D model for the pseudo Windows 95 pop up that appears 8 seconds after the poster is detected for the first time. It was created using [TinkerCAD](https://www.tinkercad.com/), which is a really cool online 3D model editor.
 
-*capybara.hlb* is a 3D model of a capybara.
+*capybara.hlb* is a 3D model of a capybara. I have no clue where I got it from.
+
+*poster.mp4* is the animated version of the poster, which is overlayed onto the physical poster in the user's camera view.
 
 *index.html* is the HTML file that contains the entire AR experience. More information about it is available inside the file, where I tried to comment as much as possible.
 
