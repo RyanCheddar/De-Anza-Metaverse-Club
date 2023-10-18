@@ -2,6 +2,8 @@
 
 This is the source code for the AR experience available on the poster we had during the Fall 2023 Club Day, on the Developer's Guild table.
 
+![CDAE84FD-4BE3-490F-A390-2D6B5BC38C07_1_105_c](https://github.com/RyanCheddar/De-Anza-Metaverse-Club/assets/44641166/23fb0fd5-c358-44e7-81c3-0b9ae0561b22)
+
 The experience utilizes [MindAR](https://hiukim.github.io/mind-ar-js-doc/), an augmented reality library that allows creating image tracked and face tracked AR experience with only one HTML file.
 
 ---
@@ -14,7 +16,7 @@ The experience utilizes [MindAR](https://hiukim.github.io/mind-ar-js-doc/), an a
 
 *poster.mp4* is the animated version of the poster, which is overlayed onto the physical poster in the user's camera view.
 
-*index.html* is the HTML file that contains the entire AR experience. More information about it is available inside the file, where I tried to comment as much as possible.
+*index.html* is the HTML file that contains the entire AR experience. There are some comments in the JavaScript section of the file, and you can figure out the rest of the file in [MindAR](https://hiukim.github.io/mind-ar-js-doc/)'s documentation.
 
 ---
 
