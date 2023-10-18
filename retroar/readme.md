@@ -2,7 +2,7 @@
 
 This is the source code for the AR experience available on the poster we had during the Fall 2023 Club Day, on the Developer's Guild table.
 
-![Club Day](https://github.com/RyanCheddar/De-Anza-Metaverse-Club/blob/7eb50a04bfe2cd2459979b0fcfca2e533f5550a7/retroar/poster.png)
+![Club Day](https://github.com/RyanCheddar/De-Anza-Metaverse-Club/blob/7eb50a04bfe2cd2459979b0fcfca2e533f5550a7/retroar/club_day.jpeg)
 
 The experience utilizes [MindAR](https://hiukim.github.io/mind-ar-js-doc/), an augmented reality library that allows creating image tracked and face tracked AR experience with only one HTML file.
 
@@ -22,4 +22,4 @@ The experience utilizes [MindAR](https://hiukim.github.io/mind-ar-js-doc/), an a
 
 Here is the poster in case you want to try the AR experience. It works best when printed:
 
-![Untitled Copy 11](https://github.com/RyanCheddar/De-Anza-Metaverse-Club/retroar/poster.png)
+![Poster](https://github.com/RyanCheddar/De-Anza-Metaverse-Club/blob/7eb50a04bfe2cd2459979b0fcfca2e533f5550a7/retroar/poster.png)
