@@ -5,15 +5,22 @@
     <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.3/dist/mindar-image-aframe.prod.js"></script>
   </head>
   <script>
+    
+    // This tells the browser to start playing the animated
+    // poster once the physical poster is found for the first
+    // time.
      window.addEventListener('targetFound', function () {
-    // Get video element by id
+    // Get animated poster by ID
     var videoElement = document.getElementById("poster");
     
-    // Play the video
+    // Play the animated poster
     videoElement.play();
   });
 
 
+
+  // This code makes the Windows 95 pop up window appear 8 seconds
+  // after the physical poster is detected for the first time.
   AFRAME.registerComponent('mytarget', {
         init: function () {
           this.el.addEventListener('targetFound', event => {
