@@ -1,12 +1,11 @@
-# Club Day Poster
+# Unofficial Meeting Poster
 
-This is the source code for the AR experience available on the poster we had during the Fall 2023 Club Day, on the Developer's Guild table.
-
-![Club Day](https://github.com/RyanCheddar/De-Anza-Metaverse-Club/blob/7eb50a04bfe2cd2459979b0fcfca2e533f5550a7/retroar/club_day.jpeg)
+This is the source code for the AR experience available on the poster we made for our unofficial meeting, which we didn't actually end up posting lol
 
 The experience utilizes [MindAR](https://hiukim.github.io/mind-ar-js-doc/), an augmented reality library that allows creating image tracked and face tracked AR experience with only one HTML file.
 
 ---
+following section to be updated when ryan stops being a lazy bum
 
 *targets.mind* is a compiled file containing tracking information about the original poster, which enables the code to track the poster. it was created using [this tool](https://hiukim.github.io/mind-ar-js-doc/tools/compile)
 
