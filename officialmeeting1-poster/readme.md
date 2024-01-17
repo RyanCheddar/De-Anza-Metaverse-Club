@@ -1,8 +1,8 @@
-# Club Day Poster
+# Official Meeting #1 Poster
 
-This is the source code for the AR experience available on the poster we had during the Fall 2023 Club Day, on the Developer's Guild table.
+This is the source code for the AR experience available on the poster posted on-campus to advertise our first official meeting.
 
-![Club Day](https://github.com/RyanCheddar/De-Anza-Metaverse-Club/blob/7eb50a04bfe2cd2459979b0fcfca2e533f5550a7/retroar/club_day.jpeg)
+[image placeholder]
 
 The experience utilizes [MindAR](https://hiukim.github.io/mind-ar-js-doc/), an augmented reality library that allows creating image tracked and face tracked AR experience with only one HTML file.
 
